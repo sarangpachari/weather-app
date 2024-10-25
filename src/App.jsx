@@ -109,7 +109,7 @@ function App() {
                 {weatherReport && (
                   <>
                     <p className="text-3xl font-bold">
-                      {weatherReport.main.temp} °C
+                      {parseInt(weatherReport.main.temp)} °C
                     </p>
                     <p className="font-bold text-xl">
                       {weatherReport.name}, {weatherReport.sys.country}
