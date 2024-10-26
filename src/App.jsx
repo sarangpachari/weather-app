@@ -61,9 +61,9 @@ function App() {
   return (
     <>
       <div className="bg-sky-200 h-lvh flex flex-col justify-center items-center">
-        <div className="w-[55rem] h-[25rem] bg-white flex">
-          <div className="w-1/2 h-full border-4 flex flex-col justify-center ps-6">
-            <h1 className="text-3xl text-sky-700">
+        <div className="p-8 bg-white flex md:flex-row flex-col md:justify-normal justify-center items-center">
+          <div className="md:w-1/2 h-full flex flex-col justify-center items-center md:items-start md:ps-6">
+            <h1 className="text-xl md:text-3xl text-sky-700">
               Welcome to{" "}
               <span className="text-orange-500 font-medium">Weather App</span>
             </h1>
@@ -79,7 +79,7 @@ function App() {
           </div>
           <div
             id="viewWeather"
-            className="w-1/2 h-full flex flex-col justify-center items-center border-4"
+            className="w-1/2 h-full flex flex-col justify-center items-center"
           >
             <button
               onClick={currLocWeather}
@@ -92,7 +92,7 @@ function App() {
             <p>OR</p>
             <input
               id="searchValue"
-              className="mt-3 border-b-2 text-center py-2 w-3/4 rounded text-sky-950"
+              className="mt-3 border-b-2 text-center py-2 md:w-3/4 rounded text-sky-950"
               type="text"
               placeholder="Enter Location Name"
             />
@@ -102,7 +102,7 @@ function App() {
               value="Search"
               className="border hover:scale-90 bg-sky-900 text-white px-3 py-1 mt-2 rounded-full"
             />
-            <div className="text-sky-700 mt-5 flex justify-evenly items-center w-full">
+            <div className="text-sky-700 mt-5 flex md:flex-row flex-col gap-5 justify-evenly items-center w-full">
               {/* WEATHER Report */}
               <div className="">
                 {/* <img src={currWeatherImage} alt="" /> */}
@@ -119,7 +119,7 @@ function App() {
                 {error && <p className="text-red-500">{error}</p>}
               </div>
               {/* WEATHER REPORT */}
-              <div className="text-right">
+              <div className="text-center md:text-right">
                 {weatherReport && (
                   <>
                     <p>
@@ -140,7 +140,7 @@ function App() {
 
         {/* FOOTER */}
         <div className="">
-          <p className="pt-10 text-sky-800 font-extralight">
+          <p className="pt-10 text-center px-5 text-sky-800 font-extralight">
             Copyright &copy; Designed and Developed by Sarang.P.Achari
           </p>
         </div>
